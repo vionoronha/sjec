@@ -1,15 +1,27 @@
-const function=(props) {
-return(
-Header={course}
-Content={props.part1}{props.excercise1}
-        {props.part2}{props.excercise2}
-        {props.part3}{props.excercise3}
-Total={excercise1+excercise2+excercise3}
-
-)
+const Header = ({course}) => {
+  return (
+    <h1>{course}</h1>
+  )
 }
 
+const Content = (props) => {
+  return (
+    <div>
+    <p>{props.part1} {props.exercises1} </p>
+    <p>{props.part2} {props.exercises2} </p>
+    <p>{props.part3} {props.exercises3}</p>
+    </div>
+  )
 }
+
+const Total = ({total}) => {
+  return 
+  <div>
+  <p>Number of exercises {total}</p>
+  </div>
+}
+
+
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
